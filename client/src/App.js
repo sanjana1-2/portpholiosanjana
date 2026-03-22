@@ -14,6 +14,11 @@ import { useScrollAnimations } from './hooks/useScrollAnimations';
 import './elegant.css';
 import './App.css';
 
+// API URL configuration
+const API_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://portfolio-backend.onrender.com'
+  : 'http://localhost:5000';
+
 function App() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,7 +31,7 @@ function App() {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get('/api/projects');
+      const response = await axios.get(`${API_URL}/api/projects`);
       setProjects(response.data);
     } catch (error) {
       console.error('Error fetching projects:', error);

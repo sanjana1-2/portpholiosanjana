@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const API_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://portfolio-backend.onrender.com'
+  : 'http://localhost:5000';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -27,7 +31,7 @@ const Contact = () => {
     setSuccess(false);
 
     try {
-      const response = await axios.post('/api/contact', formData);
+      const response = await axios.post(`${API_URL}/api/contact`, formData);
       if (response.status === 201) {
         setSuccess(true);
         setFormData({
