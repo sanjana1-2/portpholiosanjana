@@ -1,0 +1,88 @@
+/* Cinematic Intro Styles */
+
+.cinematic-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.cinematic-intro.hidden {
+  display: none;
+}
+
+.cinematic-intro-content {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.cinematic-intro-bars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.cinematic-intro-bar {
+  position: absolute;
+  background: #000;
+  animation: slideOut 1s ease-in-out forwards;
+}
+
+.cinematic-intro-bar.top {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  animation: slideOutTop 1s ease-in-out forwards;
+}
+
+.cinematic-intro-bar.bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  animation: slideOutBottom 1s ease-in-out forwards;
+}
+
+@keyframes slideOutTop {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideOutBottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
