@@ -1,49 +1,56 @@
 import React from 'react';
 
-function About() {
+const About = () => {
   return (
-    <section id="about" className="about">
-      <div className="container">
-        <h2>ABOUT</h2>
+    <section id="about" className="about-section">
+      <div className="about-container">
+        <h2 className="section-title">About Me</h2>
+        
         <div className="about-content">
-          <div className="about-grid">
-            <div className="about-text">
-              <p className="about-intro">
-                Full-Stack Developer | React • Node.js • Laravel | Software Engineer
-              </p>
-              <p className="about-description">
-                CSE student at Lovely Professional University building scalable web applications. Expertise in full-stack development, 
-                secure backend systems, and database-driven solutions. Passionate about clean code, performance optimization, and solving real-world problems.
-              </p>
-              <p className="about-description" style={{ marginTop: '1rem', fontSize: '0.95rem', color: '#b0b0b0' }}>
-                <strong>Tech Stack:</strong> React • Node.js • Laravel • MongoDB • MySQL • JavaScript • Python • Java • C++
-              </p>
-              <p className="about-description" style={{ marginTop: '1rem', fontSize: '0.95rem', color: '#b0b0b0' }}>
-                <strong>Specialization:</strong> Full-stack architecture • RESTful APIs • Real-time systems • Database design • Performance optimization (30-50% improvements)
-              </p>
-              <div className="about-stats">
-                <div className="stat">
-                  <div className="stat-number">4</div>
-                  <div className="stat-label">MAJOR PROJECTS</div>
-                </div>
-                <div className="stat">
-                  <div className="stat-number">50+</div>
-                  <div className="stat-label">LEETCODE STREAK</div>
-                </div>
-                <div className="stat">
-                  <div className="stat-number">5★</div>
-                  <div className="stat-label">HACKERRANK JAVA</div>
-                </div>
+          <div className="about-image">
+            <img src="/images/profile.png" alt="Sanjana Bhardwaj" className="profile-image" />
+            <div className="image-glow"></div>
+          </div>
+          
+          <div className="about-text">
+            <p className="about-intro">
+              Hi, I'm <span className="highlight">Sanjana Bhardwaj</span>, a passionate full-stack developer and AI enthusiast with a strong foundation in computer science and problem-solving.
+            </p>
+            
+            <p className="about-description">
+              I specialize in building scalable web applications using modern technologies like React, Node.js, and MongoDB. With expertise in AI automation and machine learning, I create intelligent solutions that solve real-world problems.
+            </p>
+            
+            <div className="about-highlights">
+              <div className="highlight-item">
+                <h3>🎯 Focus Areas</h3>
+                <ul>
+                  <li>Full-Stack Web Development</li>
+                  <li>AI & Machine Learning Integration</li>
+                  <li>Cloud Deployment & DevOps</li>
+                  <li>Problem Solving & Algorithms</li>
+                </ul>
+              </div>
+              
+              <div className="highlight-item">
+                <h3>💡 What I Do</h3>
+                <ul>
+                  <li>Design and develop responsive web applications</li>
+                  <li>Implement AI-powered features and automation</li>
+                  <li>Optimize performance and user experience</li>
+                  <li>Deploy applications to production environments</li>
+                </ul>
               </div>
             </div>
-            <div className="about-image">
-              <img src="/images/SANJANA2.png" alt="Sanjana Bhardwaj" className="about-photo" />
-            </div>
+            
+            <p className="about-closing">
+              I'm always eager to learn new technologies and take on challenging projects. Let's collaborate and build something amazing together!
+            </p>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default About;
