@@ -4,6 +4,7 @@ import ElegantCursor from './components/ElegantCursor';
 import HeroElegant from './components/HeroElegant';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import Achievements from './components/Achievements';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import AIAutomation from './components/AIAutomation';
@@ -46,6 +47,7 @@ function App() {
       <Navbar />
       <HeroElegant />
       <About />
+      <Achievements />
       <Skills />
       <Projects projects={projects} loading={loading} />
       <AIAutomation />
