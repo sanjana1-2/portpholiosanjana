@@ -15,12 +15,23 @@ const IntroAnimation = ({ onComplete }) => {
 
   if (!isVisible) return null;
 
+  const techIcons = ['⚛️', '🟢', '🗄️', '☁️', '🤖', '⚡', '🎨', '🔧'];
+
   return (
     <div className="intro-animation">
       <div className="intro-background">
         <div className="intro-glow intro-glow-1"></div>
         <div className="intro-glow intro-glow-2"></div>
         <div className="intro-glow intro-glow-3"></div>
+      </div>
+
+      {/* Floating Tech Icons */}
+      <div className="intro-tech-icons">
+        {techIcons.map((icon, index) => (
+          <div key={index} className="tech-icon" style={{ '--index': index }}>
+            {icon}
+          </div>
+        ))}
       </div>
 
       <div className="intro-container">
@@ -41,6 +52,13 @@ const IntroAnimation = ({ onComplete }) => {
 
           <p className="intro-subtitle-large">Full-Stack Developer</p>
           <p className="intro-tagline">Building Digital Solutions</p>
+
+          <div className="intro-skills-showcase">
+            <span className="skill-badge">React</span>
+            <span className="skill-badge">Node.js</span>
+            <span className="skill-badge">MongoDB</span>
+            <span className="skill-badge">AI</span>
+          </div>
         </div>
 
         <div className="intro-bottom-section">
