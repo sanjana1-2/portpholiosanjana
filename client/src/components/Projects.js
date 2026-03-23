@@ -4,97 +4,111 @@ function Projects({ projects, loading }) {
   const defaultProjects = [
     {
       _id: '1',
-      title: 'LIVE CLASSROOM SYSTEM',
+      title: 'Live Classroom System',
       date: 'MAR 2026',
-      description: 'Scalable real-time Live Classroom platform supporting 100+ concurrent users. Interactive virtual sessions with seamless communication. 40% system efficiency improvement.',
+      description: 'Scalable real-time platform supporting 100+ concurrent users with interactive virtual sessions and seamless communication.',
       features: [
-        'Real-time live class sessions (100+ concurrent users)',
+        'Real-time live sessions (100+ users)',
         'Secure JWT authentication',
-        'Attendance tracking system',
+        'Attendance tracking',
         'Real-time messaging',
         'Session management',
-        'High-performance API architecture (30% latency reduction)'
+        '30% latency reduction'
       ],
-      techStack: ['REACT', 'TAILWIND CSS', 'JAVASCRIPT', 'NODE.JS', 'EXPRESS.JS', 'MONGODB/MYSQL', 'REST APIS', 'JWT AUTH']
+      techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
+      icon: '🎓'
     },
     {
       _id: '2',
-      title: 'ONLINE ZOO PLATFORM',
+      title: 'Online Zoo Platform',
       date: 'FEB 2025',
-      description: 'Responsive zoo platform. Animal database. Ticket booking. Weather integration. Interactive maps. Admin control.',
+      description: 'Responsive zoo platform with animal database, ticket booking, weather integration, and interactive maps.',
       features: [
         'Animal information database',
         'Ticket booking system',
         'Weather integration',
         'Interactive maps',
-        'Admin management'
+        'Admin management',
+        'Responsive design'
       ],
-      techStack: ['HTML & CSS', 'TAILWIND CSS', 'JAVASCRIPT', 'PHP', 'MYSQL']
+      techStack: ['React', 'Tailwind CSS', 'PHP', 'MySQL'],
+      icon: '🦁'
     },
     {
       _id: '3',
-      title: 'BLOOD DONATION WEBSITE',
+      title: 'Blood Donation Network',
       date: 'FEB 2025',
-      description: 'Community blood donation platform. Donor registration. Blood bank management. Request matching. Emergency alerts. Life-saving network.',
+      description: 'Community blood donation platform with donor registration, blood bank management, and emergency alert system.',
       features: [
         'Donor registration & profiles',
-        'Blood bank inventory management',
+        'Blood bank inventory',
         'Request matching system',
-        'Emergency blood alerts',
-        'Donation history tracking',
+        'Emergency alerts',
+        'Donation history',
         'Admin dashboard'
       ],
-      techStack: ['REACT', 'NODE.JS', 'MONGODB', 'EXPRESS', 'JWT AUTH']
+      techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
+      icon: '🩸'
     },
     {
       _id: '4',
-      title: 'SORTING VISUALIZER',
+      title: 'Sorting Visualizer',
       date: 'DEC 2024',
-      description: 'Interactive sorting algorithm visualizer. Real-time visualization. Multiple algorithms. Speed control. Educational tool for learning data structures.',
+      description: 'Interactive algorithm visualizer with real-time visualization, multiple sorting algorithms, and educational features.',
       features: [
-        'Multiple sorting algorithms',
+        'Multiple algorithms',
         'Real-time visualization',
-        'Speed control slider',
-        'Array size customization',
+        'Speed control',
+        'Array customization',
         'Algorithm comparison',
         'Step-by-step execution'
       ],
-      techStack: ['REACT', 'JAVASCRIPT', 'CSS3', 'CANVAS API', 'ALGORITHMS']
+      techStack: ['React', 'JavaScript', 'Canvas API', 'CSS3'],
+      icon: '📊'
     }
   ];
 
   const displayProjects = projects.length > 0 ? projects : defaultProjects;
 
   return (
-    <section id="projects" className="projects">
-      <div className="container">
-        <h2>PROJECTS</h2>
+    <section id="projects" className="projects-section">
+      <div className="projects-container">
+        <h2 className="section-title">Featured Projects</h2>
+        <p className="section-subtitle">Innovative solutions built with modern technologies</p>
+        
         {loading ? (
-          <p style={{ textAlign: 'center', color: '#b0b0b0' }}>LOADING...</p>
+          <p style={{ textAlign: 'center', color: '#b0b0b0', fontSize: '1.1rem' }}>Loading projects...</p>
         ) : (
           <div className="projects-grid">
             {displayProjects.map((project) => (
               <div key={project._id} className="project-card">
+                <div className="project-icon">{project.icon}</div>
+                
                 <div className="project-header">
                   <h3>{project.title}</h3>
-                  <span className="date">{project.date}</span>
+                  <span className="project-date">{project.date}</span>
                 </div>
+
                 <p className="project-description">{project.description}</p>
+
                 <div className="project-features">
+                  <h4>Key Features</h4>
                   <ul>
                     {project.features.map((feature, idx) => (
                       <li key={idx}>{feature}</li>
                     ))}
                   </ul>
                 </div>
+
                 <div className="tech-stack">
                   {project.techStack.map((tech, idx) => (
-                    <span key={idx} className="tech">{tech}</span>
+                    <span key={idx} className="tech-badge">{tech}</span>
                   ))}
                 </div>
-                <div className="project-links">
-                  <a href="https://github.com/sanjana1-2" target="_blank" rel="noopener noreferrer" className="link-btn">
-                    VIEW CODE
+
+                <div className="project-footer">
+                  <a href="https://github.com/sanjana1-2" target="_blank" rel="noopener noreferrer" className="project-link">
+                    View on GitHub →
                   </a>
                 </div>
               </div>
