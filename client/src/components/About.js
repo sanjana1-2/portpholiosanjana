@@ -14,39 +14,39 @@ const About = () => {
           
           <div className="about-text">
             <p className="about-intro">
-              Hi, I'm <span className="highlight">Sanjana Bhardwaj</span>, a passionate full-stack developer and AI enthusiast dedicated to creating innovative digital solutions that make a real impact.
+              I'm <span className="highlight">Sanjana Bhardwaj</span>, a full-stack developer passionate about building scalable web applications and integrating AI solutions.
             </p>
             
             <p className="about-description">
-              With a strong foundation in computer science and hands-on experience in modern web technologies, I specialize in building scalable, user-centric applications. I combine technical expertise with creative problem-solving to deliver solutions that are not just functional, but exceptional. My journey in tech has been driven by curiosity and a commitment to continuous learning.
+              I specialize in creating modern, responsive applications using React, Node.js, and MongoDB. With a strong foundation in computer science and problem-solving, I deliver clean, maintainable code that solves real-world challenges.
             </p>
             
             <div className="about-highlights">
               <div className="highlight-item">
-                <h3>🚀 My Expertise</h3>
+                <h3>Technical Skills</h3>
                 <ul>
-                  <li>Full-Stack Web Development (React, Node.js, MongoDB)</li>
-                  <li>AI & Machine Learning Integration</li>
-                  <li>Cloud Deployment & DevOps (Render, Netlify)</li>
-                  <li>Responsive UI/UX Design</li>
-                  <li>Database Design & Optimization</li>
+                  <li>React & JavaScript</li>
+                  <li>Node.js & Express</li>
+                  <li>MongoDB & Databases</li>
+                  <li>AI & Automation</li>
+                  <li>Cloud Deployment</li>
                 </ul>
               </div>
               
               <div className="highlight-item">
-                <h3>💼 What I Bring</h3>
+                <h3>Core Strengths</h3>
                 <ul>
-                  <li>Clean, maintainable, and scalable code</li>
-                  <li>Problem-solving mindset with algorithmic thinking</li>
-                  <li>Attention to detail and user experience</li>
-                  <li>Collaborative approach to development</li>
-                  <li>Passion for learning emerging technologies</li>
+                  <li>Full-Stack Development</li>
+                  <li>Problem Solving</li>
+                  <li>Clean Code</li>
+                  <li>User Experience</li>
+                  <li>Continuous Learning</li>
                 </ul>
               </div>
             </div>
             
             <p className="about-closing">
-              I'm always excited to take on new challenges and collaborate with teams that share a vision for innovation. Whether it's building a complex web application or integrating AI solutions, I'm ready to contribute my skills and grow alongside the project. Let's create something extraordinary together!
+              I'm driven by curiosity and committed to building solutions that make an impact. Let's collaborate and create something great.
             </p>
           </div>
         </div>
