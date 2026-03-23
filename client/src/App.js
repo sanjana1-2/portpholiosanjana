@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ElegantCursor from './components/ElegantCursor';
+import IntroAnimation from './components/IntroAnimation';
 import HeroElegant from './components/HeroElegant';
 import Navbar from './components/Navbar';
 import About from './components/About';
@@ -23,6 +24,7 @@ const API_URL = process.env.NODE_ENV === 'production'
 function App() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showIntro, setShowIntro] = useState(true);
 
   useScrollAnimations();
 
@@ -41,9 +43,14 @@ function App() {
     }
   };
 
+  const handleIntroComplete = () => {
+    setShowIntro(false);
+  };
+
   return (
     <div className="App">
       <ElegantCursor />
+      {showIntro && <IntroAnimation onComplete={handleIntroComplete} />}
       <Navbar />
       <HeroElegant />
       <About />
