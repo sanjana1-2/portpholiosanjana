@@ -6,64 +6,52 @@ function Projects({ projects, loading }) {
       _id: '1',
       title: 'Live Classroom System',
       date: 'MAR 2026',
-      description: 'Scalable real-time platform supporting 100+ concurrent users with interactive virtual sessions and seamless communication.',
+      description: 'Real-time platform supporting 100+ concurrent users with interactive sessions.',
       features: [
-        'Real-time live sessions (100+ users)',
-        'Secure JWT authentication',
-        'Attendance tracking',
-        'Real-time messaging',
-        'Session management',
-        '30% latency reduction'
+        'Real-time sessions',
+        'JWT authentication',
+        'Attendance tracking'
       ],
-      techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
+      techStack: ['React', 'Node.js', 'MongoDB'],
       icon: '🎓'
     },
     {
       _id: '2',
       title: 'Online Zoo Platform',
       date: 'FEB 2025',
-      description: 'Responsive zoo platform with animal database, ticket booking, weather integration, and interactive maps.',
+      description: 'Zoo platform with animal database, ticket booking, and interactive maps.',
       features: [
-        'Animal information database',
-        'Ticket booking system',
-        'Weather integration',
-        'Interactive maps',
-        'Admin management',
-        'Responsive design'
+        'Animal database',
+        'Ticket booking',
+        'Interactive maps'
       ],
-      techStack: ['React', 'Tailwind CSS', 'PHP', 'MySQL'],
+      techStack: ['React', 'PHP', 'MySQL'],
       icon: '🦁'
     },
     {
       _id: '3',
       title: 'Blood Donation Network',
       date: 'FEB 2025',
-      description: 'Community blood donation platform with donor registration, blood bank management, and emergency alert system.',
+      description: 'Community platform for blood donation with donor registration and emergency alerts.',
       features: [
-        'Donor registration & profiles',
-        'Blood bank inventory',
-        'Request matching system',
-        'Emergency alerts',
-        'Donation history',
-        'Admin dashboard'
+        'Donor profiles',
+        'Blood inventory',
+        'Emergency alerts'
       ],
-      techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT'],
+      techStack: ['React', 'Node.js', 'MongoDB'],
       icon: '🩸'
     },
     {
       _id: '4',
       title: 'Sorting Visualizer',
       date: 'DEC 2024',
-      description: 'Interactive algorithm visualizer with real-time visualization, multiple sorting algorithms, and educational features.',
+      description: 'Interactive algorithm visualizer with real-time visualization and speed control.',
       features: [
         'Multiple algorithms',
         'Real-time visualization',
-        'Speed control',
-        'Array customization',
-        'Algorithm comparison',
-        'Step-by-step execution'
+        'Speed control'
       ],
-      techStack: ['React', 'JavaScript', 'Canvas API', 'CSS3'],
+      techStack: ['React', 'JavaScript', 'Canvas API'],
       icon: '📊'
     }
   ];
@@ -92,12 +80,9 @@ function Projects({ projects, loading }) {
                 <p className="project-description">{project.description}</p>
 
                 <div className="project-features">
-                  <h4>Key Features</h4>
-                  <ul>
-                    {project.features.map((feature, idx) => (
-                      <li key={idx}>{feature}</li>
-                    ))}
-                  </ul>
+                  {project.features.map((feature, idx) => (
+                    <span key={idx} className="feature-tag">{feature}</span>
+                  ))}
                 </div>
 
                 <div className="tech-stack">
@@ -108,7 +93,7 @@ function Projects({ projects, loading }) {
 
                 <div className="project-footer">
                   <a href="https://github.com/sanjana1-2" target="_blank" rel="noopener noreferrer" className="project-link">
-                    View on GitHub →
+                    View Code →
                   </a>
                 </div>
               </div>
